@@ -22,11 +22,11 @@ class TestingModels(TestCase):
 
 
     def test_count_all_values_name(self):
-        self.assertEquals(self.all_products, 1)
+        self.assertEqual(self.all_products, 1)
 
 
     def test_product_name(self):
-        self.assertEquals(self.product_one.name, "Iphone 14")
+        self.assertEqual(self.product_one.name, "Iphone 14")
 
     
     def test_product_price(self):
@@ -37,4 +37,4 @@ class TestingModels(TestCase):
         
         self.product_one.name = "redmi 12 pro"
         self.product_one.save()
-        self.assertEquals(self.product_one.name, "redmi 12 pro")
+        self.assertEqual(self.product_one.name, "redmi 12 pro")

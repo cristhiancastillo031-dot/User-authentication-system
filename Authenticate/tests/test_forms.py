@@ -68,8 +68,8 @@ class TestingForm(TestCase):
 
     def test_form_send_data_ok(self):
         response = self.client.post(self.url, self.send)
-        self.assertEquals(response.status_code, 200, msg="returns a 200 status code when the user send the data")
+        self.assertEqual(response.status_code, 200, msg="returns a 200 status code when the user send the data")
 
 
     def test_form_error_messages(self):
-        self.assertEquals(self.form_errors.errors["password2"], ["The two password fields didn’t match."])
+        self.assertEqual(self.form_errors.errors["password2"], ["The two password fields didn’t match."])

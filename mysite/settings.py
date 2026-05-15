@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-h@uz2(1(j#71kej(a7qw2y5r6a=e+86p)ym3zz57l24ih5#*n=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -117,3 +117,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'Authenticate/static'),]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = ['https://*.githubdev.com', 'https://*.preview.app.github.dev']
+CSRF_TRUSTED_ORIGINS = ['https://*.githubdev.com', 'https://*.preview.app.github.dev', 'https://*.app.github.dev']
+CSRF_TRUSTED_ORIGINS = ['https://localhost:8000', 'http://localhost:8000', 'https://127.0.0.1:8000', 'http://127.0.0.1:8000']

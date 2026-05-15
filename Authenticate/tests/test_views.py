@@ -15,11 +15,11 @@ class TestViewHome(TestCase):
 
 
     def test_home_view_returns_200_ok(self):
-        self.assertEquals(self.response.status_code, 200, msg="the view 'home' have to returns a 200 status code.")
+        self.assertEqual(self.response.status_code, 200, msg="the view 'home' have to returns a 200 status code.")
     
 
     def test_view_home_fail(self):
-        self.assertNotEquals(self.response.status_code, 404, msg="the view 'home' do not returns a 404 status code.")
+        self.assertNotEqual(self.response.status_code, 404, msg="the view 'home' do not returns a 404 status code.")
 
 
     def test_template_associated_to_url_pass(self):
